@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основы HTML для начинающих</title>
+</head>
+<body>
+
+    <h1 align="center">Основы HTML для начинающих</h1>
+    <p align="center"><b>Простой обучающий сайт • Выполнил Паньшин Данил Евгеньевич (ИСП-1308)</b></p>
+    <hr>
+
+    <h2 align="center">Навигация по сайту</h2>
+    <ul>
+        <li><a href="#html-what">1. Что такое HTML</a></li>
+        <li><a href="#structure">2. Структура документа</a></li>
+        <li><a href="#headings">3. Заголовки</a></li>
+        <li><a href="#text">4. Текст, списки и изображения</a></li>
+        <li><a href="#links">5. Ссылки и навигация</a></li>
+        <li><a href="#forms">6. Формы</a></li>
+        <li><a href="#tips">7. Полезные советы</a></li>
+    </ul>
+    <hr>
+
+    <!-- Раздел 1 -->
+    <h2 id="html-what">1. Что такое HTML и его назначение</h2>
+    <p>HTML (HyperText Markup Language) — это язык разметки, который используется для создания структуры веб-страниц. Он говорит браузеру, где заголовок, где текст, где картинка.</p>
+    <p><b>Пример простейшей страницы:</b></p>
+    <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="ru"&gt;
+&lt;head&gt;
+    &lt;title&gt;Моя первая страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Привет, мир!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    <hr>
+
+    <!-- Раздел 2 -->
+    <h2 id="structure">2. Структура HTML-документа</h2>
+    <p>Каждый HTML-файл должен начинаться с обязательных тегов. Это «скелет» страницы.</p>
+    <p><b>Основная структура:</b></p>
+    <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="ru"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Заголовок вкладки&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- Здесь весь видимый контент --&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre>
+    <hr>
+
+    <!-- Раздел 3 -->
+    <h2 id="headings">3. Семантические заголовки</h2>
+    <p>Заголовки создают структуру страницы. На всей странице должен быть только один &lt;h1&gt;.</p>
+    <p><b>Примеры заголовков:</b></p>
+    <pre>&lt;h1&gt;Главный заголовок&lt;/h1&gt;
+&lt;h2&gt;Раздел&lt;/h2&gt;
+&lt;h3&gt;Подраздел&lt;/h3&gt;</pre>
+    <h1>Главный заголовок (пример)</h1>
+    <h2>Раздел (пример)</h2>
+    <h3>Подраздел (пример)</h3>
+    <hr>
+
+    <!-- Раздел 4 -->
+    <h2 id="text">4. Текст, списки и изображения</h2>
+    <p>Основные элементы для содержания:</p>
+    <ul>
+        <li>&lt;p&gt; — обычный абзац</li>
+        <li>&lt;ul&gt; и &lt;ol&gt; — списки</li>
+        <li>&lt;img&gt; — изображение (обязательно указывай alt!)</li>
+    </ul>
+    <p><b>Пример изображения:</b></p>
+    <pre>&lt;img src="https://picsum.photos/id/1015/600/300" 
+     alt="Красивый пейзаж" 
+     width="600"&gt;</pre>
+    <img src="https://picsum.photos/id/1015/600/300" alt="Красивый пейзаж" width="600">
+    <hr>
+
+    <!-- Раздел 5 -->
+    <h2 id="links">5. Ссылки и навигация</h2>
+    <p>Тег &lt;a&gt; создаёт ссылки.</p>
+    <p><b>Пример ссылки:</b></p>
+    <pre>&lt;a href="https://yandex.ru" target="_blank"&gt;Перейти на Яндекс&lt;/a&gt;</pre>
+    <a href="https://yandex.ru" target="_blank">Перейти на Яндекс (откроется в новой вкладке)</a>
+    <hr>
+
+    <!-- Раздел 6 -->
+    <h2 id="forms">6. Интерактивные формы</h2>
+    <p>Формы позволяют пользователям отправлять данные.</p>
+    <p><b>Пример формы:</b></p>
+    <form action="https://httpbin.org/post" method="POST" target="_blank">
+        <p>Ваше имя:<br>
+        <input type="text" name="name" placeholder="Введите имя" required></p>
+        
+        <p>Сообщение:<br>
+        <textarea name="message" rows="5" placeholder="Напишите здесь..."></textarea></p>
+        
+        <p><input type="submit" value="Отправить форму"></p>
+    </form>
+    <p><small>(Форма отправляется на тестовый сервис для проверки)</small></p>
+    <hr>
+    <!-- Раздел 7 -->
+    <h2 id="tips">7. Полезные советы и лучшие практики</h2>
+    <ul>
+        <li>Всегда указывай <b>alt</b> у картинок</li>
+        <li>Используй семантические теги: &lt;header&gt;, &lt;main&gt;, &lt;footer&gt;</li>
+        <li>Проверяй код на <a href="https://validator.w3.org" target="_blank">validator.w3.org</a></li>
+        <li>Делай сайт адаптивным (добавляй meta viewport)</li>
+        <li>Не пропускай уровни заголовков</li>
+    </ul>
+    <p><b>Помни:</b> чистый и правильный HTML — основа любого хорошего сайта!</p>
+    <hr>
+
+    <footer>
+        <p align="center">© 2026 Паньшин Данил Евгеньевич • Итоговый проект по информатике</p>
+        <p align="center">
+            Сайт создан исключительно на языке HTML (один файл)<br>
+            <a href="https://github.com/panshindanil/html-tutorial-panshin" target="_blank">Посмотреть репозиторий на GitHub</a>
+        </p>
+        <p align="center">Если нашли ошибку — напишите мне через форму выше.</p>
+    </footer>
+
+</body>
+</html>
